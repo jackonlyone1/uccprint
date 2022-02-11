@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <SccProjectName />
+    <SccLocalPath />
+    <Keyword>MFCProj</Keyword>
+    <ProjectGuid>{7EEF0A98-CEC9-459D-B13C-9AB5286B88DB}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.Cpp.UpgradeFromVC60.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>.\Release\</OutDir>
+    <IntDir>.\Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>.\Debug\</OutDir>
+    <IntDir>.\Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Template|Win32'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules />
+    <CodeAnalysisRuleAssemblies />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <StringPooling>true</StringPooling>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <Optimization>MaxSpeed</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Release\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Release\UCCPrint.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Release\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Release\UCCPrint.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Release\UCCPrint.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>..\Bin/UCCPrint.exe</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <FunctionLevelLinking>false</FunctionLevelLinking>
+      <Optimization>Disabled</Optimization>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <WarningLevel>Level3</WarningLevel>
+      <MinimalRebuild>true</MinimalRebuild>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AssemblerListingLocation>.\Debug\</AssemblerListingLocation>
+      <PrecompiledHeaderOutputFile>.\Debug\UCCPrint.pch</PrecompiledHeaderOutputFile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>stdafx.h</PrecompiledHeaderFile>
+      <ObjectFileName>.\Debug\</ObjectFileName>
+      <ProgramDataBaseFileName>.\Debug\</ProgramDataBaseFileName>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <Midl>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TypeLibraryName>.\Debug\UCCPrint.tlb</TypeLibraryName>
+      <MkTypLibCompatible>true</MkTypLibCompatible>
+      <TargetEnvironment>Win32</TargetEnvironment>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0804</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <Bscmake>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <OutputFile>.\Debug\UCCPrint.bsc</OutputFile>
+    </Bscmake>
+    <Link>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>..\Bin/UCCPrintD.exe</OutputFile>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\ExtSource\FOPGDIPlusHelper.cpp" />
+    <ClCompile Include="..\ExtSource\FOPGDIPlusProxy.cpp" />
+    <ClCompile Include="AppLookDlg.cpp" />
+    <ClCompile Include="CanvasOffsetDlg.cpp" />
+    <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="ChoiceListDlg.cpp" />
+    <ClCompile Include="ConnectDlg.cpp" />
+    <ClCompile Include="DBChartShape.cpp" />
+    <ClCompile Include="DBGridMainDlg.cpp" />
+    <ClCompile Include="DbPrintGridShape.cpp" />
+    <ClCompile Include="DBRecordDlg.cpp" />
+    <ClCompile Include="DBSubConnectDlg.cpp" />
+    <ClCompile Include="DBSubDlg.cpp" />
+    <ClCompile Include="DBTableShape.cpp" />
+    <ClCompile Include="DIB.CPP" />
+    <ClCompile Include="DIBStatic.cpp" />
+    <ClCompile Include="EFEventSetDlg.cpp" />
+    <ClCompile Include="EFSettingDlg.cpp" />
+    <ClCompile Include="ExtTabModel.cpp" />
+    <ClCompile Include="ExtTabModelManager.cpp" />
+    <ClCompile Include="FODecimalEdit.cpp" />
+    <ClCompile Include="FOEFHyperLinkShape.cpp" />
+    <ClCompile Include="FOHyperLink.cpp" />
+    <ClCompile Include="FOPBarcodeDlg.cpp" />
+    <ClCompile Include="FOPBarcodeGenerator.cpp" />
+    <ClCompile Include="FOPBarcodeShape.cpp" />
+    <ClCompile Include="FOPBoxShape.cpp" />
+    <ClCompile Include="FOPHeaderCtrl.cpp" />
+    <ClCompile Include="FOPNewAutoFontSizeShape.cpp" />
+    <ClCompile Include="FOPODBCDataSource.cpp" />
+    <ClCompile Include="FOPPropList.cpp" />
+    <ClCompile Include="FOPRichTextWnd.cpp" />
+    <ClCompile Include="FOSplashWnd.cpp" />
+    <ClCompile Include="GWExtBmpListBox.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="MBEventEditDlg.cpp" />
+    <ClCompile Include="MBEventEditDlg6.cpp" />
+    <ClCompile Include="MBEventEditDlg7.cpp" />
+    <ClCompile Include="MBTemplageDlg.cpp" />
+    <ClCompile Include="MBTemplateFileObj.cpp" />
+    <ClCompile Include="MBTemplatePage0.cpp" />
+    <ClCompile Include="MyImageShape.cpp" />
+    <ClCompile Include="MyListItemObj.cpp" />
+    <ClCompile Include="MyNewTemplateWnd.cpp" />
+    <ClCompile Include="MyToolBoxBar.cpp" />
+    <ClCompile Include="NewButtonShape.cpp" />
+    <ClCompile Include="NewVisualProxy.cpp" />
+    <ClCompile Include="ODBCAccess.cpp" />
+    <ClCompile Include="OptionDlg.cpp" />
+    <ClCompile Include="registry.cpp" />
+    <ClCompile Include="SortHeaderCtrl.cpp" />
+    <ClCompile Include="SortListCtrl.cpp" />
+    <ClCompile Include="StartPageDlg.cpp" />
+    <ClCompile Include="StdAfx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">stdafx.h</PrecompiledHeaderFile>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeaderFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">stdafx.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <ClCompile Include="SVImageControl.cpp" />
+    <ClCompile Include="SVRichEditDlg.cpp" />
+    <ClCompile Include="SVSaveAsTemplateDlg.cpp" />
+    <ClCompile Include="SVShapeDataDlg.cpp" />
+    <ClCompile Include="TableBar.cpp" />
+    <ClCompile Include="TemplateDlg.cpp" />
+    <ClCompile Include="UCCPrint.cpp" />
+    <ClCompile Include="UCCPrintDoc.cpp" />
+    <ClCompile Include="UCCPrintView.cpp" />
+    <ClCompile Include="UPChartStyleDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="UCCPrint.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AppLookDlg.h" />
+    <ClInclude Include="CanvasOffsetDlg.h" />
+    <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="ChoiceListDlg.h" />
+    <ClInclude Include="ConnectDlg.h" />
+    <ClInclude Include="DBChartShape.h" />
+    <ClInclude Include="DBGridMainDlg.h" />
+    <ClInclude Include="DbPrintGridShape.h" />
+    <ClInclude Include="DBRecordDlg.h" />
+    <ClInclude Include="DBSubConnectDlg.h" />
+    <ClInclude Include="DBSubDlg.h" />
+    <ClInclude Include="DBTableShape.h" />
+    <ClInclude Include="DIB.H" />
+    <ClInclude Include="DIBStatic.h" />
+    <ClInclude Include="EFEventSetDlg.h" />
+    <ClInclude Include="EFSettingDlg.h" />
+    <ClInclude Include="ExtTabModel.h" />
+    <ClInclude Include="ExtTabModelManager.h" />
+    <ClInclude Include="FODecimalEdit.h" />
+    <ClInclude Include="FOEFHyperLinkShape.h" />
+    <ClInclude Include="FOHyperLink.h" />
+    <ClInclude Include="FOPBarcodeDefine.h" />
+    <ClInclude Include="FOPBarcodeDlg.h" />
+    <ClInclude Include="FOPBarcodeGenerator.h" />
+    <ClInclude Include="FOPBarcodeShape.h" />
+    <ClInclude Include="FOPBoxShape.h" />
+    <ClInclude Include="FOPHeaderCtrl.h" />
+    <ClInclude Include="FOPNewAutoFontSizeShape.h" />
+    <ClInclude Include="FOPODBCDataSource.h" />
+    <ClInclude Include="FOPPropList.h" />
+    <ClInclude Include="FOPRichTextWnd.h" />
+    <ClInclude Include="FOSplashWnd.h" />
+    <ClInclude Include="GWExtBmpListBox.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MBEventEditDlg.h" />
+    <ClInclude Include="MBEventEditDlg6.h" />
+    <ClInclude Include="MBEventEditDlg7.h" />
+    <ClInclude Include="MBTemplageDlg.h" />
+    <ClInclude Include="MBTemplateFileObj.h" />
+    <ClInclude Include="MBTemplatePage0.h" />
+    <ClInclude Include="MyImageShape.h" />
+    <ClInclude Include="MyListItemObj.h" />
+    <ClInclude Include="MyNewTemplateWnd.h" />
+    <ClInclude Include="MyToolBoxBar.h" />
+    <ClInclude Include="NewButtonShape.h" />
+    <ClInclude Include="NewVisualProxy.h" />
+    <ClInclude Include="ODBCAccess.h" />
+    <ClInclude Include="OptionDlg.h" />
+    <ClInclude Include="registry.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SortHeaderCtrl.h" />
+    <ClInclude Include="SortListCtrl.h" />
+    <ClInclude Include="StartPageDlg.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="SVImageControl.h" />
+    <ClInclude Include="SVRichEditDlg.h" />
+    <ClInclude Include="SVSaveAsTemplateDlg.h" />
+    <ClInclude Include="SVShapeDataDlg.h" />
+    <ClInclude Include="TableBar.h" />
+    <ClInclude Include="TemplateDlg.h" />
+    <ClInclude Include="UCCPrint.h" />
+    <ClInclude Include="UCCPrintDoc.h" />
+    <ClInclude Include="UCCPrintView.h" />
+    <ClInclude Include="UPChartStyleDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\bitmap1.bmp" />
+    <Image Include="res\bitmap_2.bmp" />
+    <Image Include="res\bitmap_3.bmp" />
+    <Image Include="res\bitmap_4.bmp" />
+    <Image Include="res\bitmap_8.bmp" />
+    <Image Include="res\bitmap_c.bmp" />
+    <Image Include="res\bitmap_d.bmp" />
+    <Image Include="res\bitmap_l.bmp" />
+    <Image Include="res\bitmap_n.bmp" />
+    <Image Include="res\bitmap_o.bmp" />
+    <Image Include="res\bitmap_p.bmp" />
+    <Image Include="res\bmp00001.bmp" />
+    <Image Include="res\bmp00002.bmp" />
+    <Image Include="res\bmp00003.bmp" />
+    <Image Include="res\bmp00004.bmp" />
+    <Image Include="res\bmp00005.bmp" />
+    <Image Include="res\bmp00017.bmp" />
+    <Image Include="res\bmp00018.bmp" />
+    <Image Include="res\bmp00019.bmp" />
+    <Image Include="res\bmp00020.bmp" />
+    <Image Include="res\bmp2.bmp" />
+    <Image Include="res\bmp2208.bmp" />
+    <Image Include="res\bmp2209.bmp" />
+    <Image Include="res\bmp2210.bmp" />
+    <Image Include="res\bmp2225.bmp" />
+    <Image Include="res\font_bar.bmp" />
+    <Image Include="res\fo_drawbar.bmp" />
+    <Image Include="res\fo_toolbar1.bmp" />
+    <Image Include="res\ico00001.ico" />
+    <Image Include="res\icon_bar.ico" />
+    <Image Include="res\imagelis.bmp" />
+    <Image Include="res\logo.bmp" />
+    <Image Include="res\mb_bitma.bmp" />
+    <Image Include="res\mb_image.bmp" />
+    <Image Include="res\mintitle.bmp" />
+    <Image Include="res\setup.bmp" />
+    <Image Include="res\sv_richedit_bar.bmp" />
+    <Image Include="res\Toolbar.bmp" />
+    <Image Include="res\toolbar1.bmp" />
+    <Image Include="res\toolbar_.bmp" />
+    <Image Include="res\UCCPrint.ico" />
+    <Image Include="res\UCCPrintDoc.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="res\UCCPrint.rc2" />
+    <CustomBuild Include="UCCPrint.reg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
